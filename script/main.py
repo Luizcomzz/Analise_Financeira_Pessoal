@@ -109,8 +109,14 @@ def consultar_percentual(conn): #consulta de percentual gastos por categoria
     """
     return pd.read_sql_query(consulta, conn)
 
-def exportar_dados(df): #exportar dados tratados
-    df.to_csv("data/dados_tratados.csv", index=False)
+def exportar_dados(df): #exportar dados tratados e trocados para a moeda brasileira
+    df_export = df.copy()
+
+    df_export['valor'] = df_export['valor'].map(
+        lambda x: f"{x:.2f}".replace('.', ',')
+    )
+
+    df_export.to_csv("data/dados_tratados.csv", index=False)
 
 def main():
     df = carregar_dados("data/finanças_2026.csv")
