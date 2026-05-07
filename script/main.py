@@ -40,14 +40,14 @@ def categorizar(descricao):
         return "Saúde"
     elif "livro" in descricao or "curso" in descricao:
         return "Educação"
-    elif "passeio" in descricao or "passagem" in descricao or "netflix" in descricao or "prime" in descricao or "forró" in descricao:
+    elif "passeio" in descricao or "passagem" in descricao or "netflix" in descricao or "prime" in descricao or "forró" in descricao or "quermesse" in descricao:
         return "Lazer"
     elif "fatura nu" in descricao:
         return "Cartão"
     else:
         return "Outros"
 
-#criar uma tabela utilizando sql
+#criar a conexão da tabela para ser utilizada com SQL
 def criar_tabela(df, nome_banco):
     conn = sql.connect(nome_banco)
 
