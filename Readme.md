@@ -93,7 +93,7 @@ Inicialmente houve preocupação excessiva com número de commits, porém o proj
 
 * [Google Sheets](https://developers.google.com/workspace/sheets?hl=pt-br/): criação de planilhas em nuvem
 * [Python](https://www.python.org/): linguagem de programação
-* [Pandas](https://pypi.org/project/SpeechRecognition/](https://pandas.pydata.org/)): trabalhar com bando de dados e integralos
+* [Pandas](https://pypi.org/project/SpeechRecognition/](https://pandas.pydata.org/)): trabalhar com banco de dados e integralos
 * [SQLite](https://pypi.org/project/gTTS/](https://sqlite.org/)): consultar banco de dados 
 * [Power BI](https://pypi.org/project/playsound/](https://www.microsoft.com/pt-br/power-platform/products/power-bi/desktop)): Apresentação de Dashboard
   
