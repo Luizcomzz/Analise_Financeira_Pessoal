@@ -1,5 +1,6 @@
 # Sistema de Análise Financeira Pessoal com Pipeline Automatizado
 
+<<<<<<< HEAD
 Sistema de análise financeira pessoal desenvolvido com Python, SQLite e Power BI, com foco em tratamento, categorização e análise automatizada de transações financeiras, permitindo geração de insights sobre comportamento de consumo e apoio à tomada de decisão baseada em dados.
 
 ## Objetivo:
@@ -56,6 +57,34 @@ Durante o desenvolvimento do projeto foram aplicados conhecimentos em:
 * Tratamento de datas
 * Enriquecimento categórico
 
+=======
+Desenvolvimento de um pipeline analítico para tratamento, categorização e análise de dados financeiros pessoais, utilizando Python, Pandas e SQL, com integração a dashboard interativo no Power BI para geração de insights sobre comportamento de consumo e suporte à tomada de decisão orientada por dados.
+## Objetivo:
+
+Criar um sistema que regitre os dados financeiros, que gere relatórios, indentifique padrões e ajude a tomar decisão baseada nas suas proprias informações pessoais 
+
+## Competencias técnicas aplicadas
+Durante o desenvolvimento do projeto foram aplicados conhecimentos em:
+* Importação de bases CSV e Excel
+* Limpeza e padronização de colunas
+* Conversão de tipos monetários e temporais
+* Transformação e enriquecimento de dados
+  
+### Programação em Python
+* Estruturação modular de funções
+* Aplicação de regras condicionais
+* Exportação automatizada de bases tratadas
+
+### Banco de dados
+* Modelagem relacional simples com SQLite
+* Criação e atualização de tabelas
+* Consultas analíticas em SQL
+
+### Visualização Analitica
+* Integração com Power BI
+* Construção de indicadores e filtros interativos
+* Exploração visual de padrões financeiros
+>>>>>>> 94c66df1e14d52be36127414e38600c040691a6f
 
 ## Metodologia 
 A etapa inicial consistiu na ingestão de dados financeiros a partir de planilhas previamente utilizadas para controle pessoal.
@@ -97,6 +126,7 @@ A integração com banco relacional permitiu:
 * praticar consultas analíticas
 * estruturar persistência de dados
 * reforçar conhecimentos em modelagem e extração
+<<<<<<< HEAD
 
 ## Principais aprendizados 
 
@@ -106,6 +136,12 @@ Durante o desenvolvimento, alguns aprendizados importantes surgiram:
 * A utilidade do SQL mesmo em projetos pessoais
 * A necessidade de debugging estruturado e refinamento contínuo
 O projeto também reforçou a ideia de que múltiplos commits representam rastreabilidade técnica e evolução do desenvolvimento.
+=======
+O processo reforçou a importância de pausas estratégicas durante debugging, permitindo retomada com maior clareza analítica.
+Um aprendizado importante foi compreender o versionamento como processo iterativo.
+
+Inicialmente houve preocupação excessiva com número de commits, porém o projeto evidenciou que o histórico de evolução representa rastreabilidade técnica e demonstra capacidade de refinamento contínuo.
+>>>>>>> 94c66df1e14d52be36127414e38600c040691a6f
 
 ## Evoluções Futuras
 
@@ -116,13 +152,21 @@ O projeto também reforçou a ideia de que múltiplos commits representam rastre
 ### Médio prazo
 
 * Inclusão de tabelas de receitas
+<<<<<<< HEAD
 * Melhoria de organização por categorias
+=======
+>>>>>>> 94c66df1e14d52be36127414e38600c040691a6f
 
 ### Longo prazo
 
 * Modelagem integrada de gastos, receitas e investimentos
+<<<<<<< HEAD
 * Automação completa da ingestão de dados
 * Consolidação patrimonial
+=======
+* Automação da ingestão de dados
+* Expansão para visão consolidada patrimonial
+>>>>>>> 94c66df1e14d52be36127414e38600c040691a6f
 
 
 ## Tecnologias utilizadas:
@@ -146,7 +190,14 @@ O projeto também reforçou a ideia de que múltiplos commits representam rastre
 
 ### **3. Instale as bibliotecas necessárias pelo terminal, dentro dessa pasta criada:**
 
+<<<<<<< HEAD
 * Pandas: `pip install pandas`
 * SQLite3: `import sqlite3 as sql`
 
 ### **4. Importe o modelo de [planilha](https://docs.google.com/spreadsheets/d/1YnmxyQ9UEySS7x8o_XhC5K4v2xB2Np2OQDJj7tapOdI/edit?usp=sharing) de dados automatica, porem vai ter que usar o google apps script ai posso te passar o codigo que usei e precisa ativar na primeira vez que usar
+=======
+* Pandas: `import pandas as pd`
+* SQLite3: `import sqlite3 as sql`
+
+### **4. Importe o modelo de [planilha](https://docs.google.com/spreadsheets/d/1YnmxyQ9UEySS7x8o_XhC5K4v2xB2Np2OQDJj7tapOdI/edit?usp=sharing)de dados automatica, porem vai ter que usar o google apps script ai posso te passar o codigo que usei e precisa ativar na primeira vez que usar
+>>>>>>> 94c66df1e14d52be36127414e38600c040691a6f
