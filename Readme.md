@@ -1,184 +1,184 @@
-# Sistema de Análise Financeira Pessoal com Pipeline Automatizado
+﻿# Sistema de Análise Financeira Pessoal com Pipeline Automatizado
 
+![Python](https://img.shields.io/badge/Python-3.14-3776AB?style=flat&logo=python&logoColor=white)
+![Pandas](https://img.shields.io/badge/Pandas-3.0-150458?style=flat&logo=pandas&logoColor=white)
+![SQLite](https://img.shields.io/badge/SQLite-3-003B57?style=flat&logo=sqlite&logoColor=white)
+![Power BI](https://img.shields.io/badge/Power%20BI-Dashboard-F2C811?style=flat&logo=powerbi&logoColor=black)
+![Google Sheets](https://img.shields.io/badge/Google%20Sheets-Fonte-34A853?style=flat&logo=googlesheets&logoColor=white)
+![Status](https://img.shields.io/badge/Status-Em%20operação-0075CA?style=flat)
 
-Sistema de análise financeira pessoal desenvolvido com Python, SQLite e Power BI, com foco em tratamento, categorização e análise automatizada de transações financeiras, permitindo geração de insights sobre comportamento de consumo e apoio à tomada de decisão baseada em dados.
+> ⚡ **Este é um sistema em operação** — não uma análise estática. Novos dados são processados mensalmente e os insights evoluem com o comportamento financeiro real.
 
+---
 
-## Objetivo:
+## 🎯 Problema de Negócio
 
-Criar um sistema capaz de:
-* Registrar transações financeiras pessoais
-* Automatizar tratamento e categorização dos dados
-* Identificar padrões de gastos
-* Gerar relatórios e visualizações interativas
-* Apoiar decisões financeiras com base em dados históricos
-O projeto surgiu da necessidade de transformar um controle financeiro manual em um processo estruturado e orientado por dados.
+Controle financeiro pessoal feito manualmente em planilhas gera inconsistência, dificulta análise histórica e não oferece visibilidade real sobre padrões de consumo ao longo do tempo.
 
-## Dashboard
+Este projeto cria um **pipeline automatizado de ponta a ponta** que ingere dados do Google Sheets, trata e categoriza transações automaticamente por palavras-chave, persiste em banco relacional SQLite e gera um dashboard interativo no Power BI — transformando um controle manual em um processo orientado por dados.
+
+> **Pergunta central:** Onde vai o meu dinheiro? Quais categorias concentram mais gastos e como meu comportamento financeiro evolui mês a mês?
+
+---
+
+## 🔍 Principais Achados
+
+> Base atual: **57 transações · 4 meses (mai–ago 2024) · Total monitorado: R$ 13.955**
+
+| # | Achado | O que isso significa |
+|---|---|---|
+| 1 | **Cartão de crédito** representa **59%** dos gastos (R$ 8.236) | A fatura do cartão consolida dezenas de compras — separar os itens da fatura é a próxima evolução que tornaria a análise 10x mais granular |
+| 2 | **"Outros"** ainda concentra **25,8%** dos gastos (R$ 3.597) | 1 em cada 4 reais gastos ainda sem classificação — cada nova palavra-chave no dicionário de categorias reduz diretamente esse número |
+| 3 | **Junho foi o mês de maior gasto** (R$ 4.167) — 66% acima de agosto (R$ 2.500) | Oscilação de R$ 1.667 entre meses indica ausência de orçamento por categoria — dado que o sistema agora rastreia automaticamente |
+
+---
+
+## ⭐ Diferenciais Técnicos deste Projeto
+
+| Diferencial | Por que importa |
+|---|---|
+| **Sistema vivo com dados reais** | Não é um case fictício — é um pipeline em operação com dados pessoais reais atualizados mensalmente |
+| **Engine de categorização extensível** | Baseada em dicionário de palavras-chave: adicionar uma nova categoria não exige alterar a lógica do código |
+| **Pipeline ponta a ponta** | Google Sheets → Python → SQLite → Power BI — simula uma stack de dados corporativa real |
+| **Iniciativa própria** | Projeto criado por necessidade real, não por demanda de curso ou processo seletivo |
+
+---
+
+## ⚙️ Como o Pipeline Funciona
+
+```
+Google Sheets → CSV → Python (tratamento + categorização) → SQLite → consultas SQL → Power BI
+```
+
+| Etapa | O que acontece |
+|---|---|
+| **1. Ingestão** | Dados exportados do Google Sheets em CSV |
+| **2. Tratamento** | Padronização de colunas, conversão monetária (R$ → float), conversão de datas |
+| **3. Categorização automática** | Engine baseada em dicionário extensível de palavras-chave |
+| **4. Persistência** | Dados persistidos em banco SQLite para consultas analíticas |
+| **5. Análise SQL** | Total, por categoria, evolução mensal, ticket médio e percentual por categoria |
+| **6. Exportação** | Base tratada exportada em CSV para integração com Power BI |
+| **7. Visualização** | Dashboard interativo com KPIs financeiros atualizado a cada execução |
+
+---
+
+## 💡 Impacto Esperado
+
+Com o pipeline operacional, é possível:
+
+- **Identificar padrões de consumo** por categoria ao longo dos meses
+- **Detectar meses atípicos** de gasto comparando com a média histórica
+- **Reduzir a categoria "Outros"** continuamente à medida que o dicionário de categorias evolui
+- **Refinar o orçamento pessoal** com base em dados históricos reais, não em estimativas
+- **Expandir para receitas e investimentos** — consolidando visão patrimonial completa
+
+---
+
+## 📊 Dashboard
 
 <p align="center">
-  <img src="\dashboard\visual_finances.jpg" width="900">
+  <img src="dashboard/visual_finances.jpg" width="900">
 </p>
 
-* Gastos por categoria
-* Evolução financeira mensal
-* Comparação entre despesas
-* Distribuição percentual dos gastos
-* Identificação de padrões de consumo
+- **Gastos por categoria:** distribuição percentual e absoluta das despesas no período
+- **Evolução financeira mensal:** comparativo mês a mês do total gasto — detecta sazonalidade e picos
+- **Ticket médio mensal:** valor médio por transação, útil para identificar mudanças de comportamento
+- **Distribuição percentual:** fatias de consumo por categoria para embasar decisões de corte
 
+---
 
-## Competencias técnicas aplicadas
-Durante o desenvolvimento do projeto foram aplicados conhecimentos em:
-* Importação de bases CSV e Excel
-* Limpeza e padronização de colunas
-* Conversão de tipos monetários e temporais
-* Transformação e enriquecimento de dados
- 
-### Programação em Python
-* Manipulação de dados com Pandas
-* Limpeza e transformação de dados
-* Estruturação modular de funções
-* Aplicação de regras condicionais
-* Exportação automatizada de bases tratadas
+## 📂 Estrutura do Projeto
 
+```
+Analise_Financeira_Pessoal/
+├── data/
+│   ├── raw/                       # Dados brutos (não versionados por privacidade)
+│   │   └── financas_2026.csv
+│   └── processed/                 # Gerado automaticamente pelo pipeline
+│       └── dados_tratados.csv
+├── database/
+│   └── financas.db                # Banco SQLite gerado pelo pipeline
+├── dashboard/
+│   ├── visual_finances.jpg        # Imagem exportada do dashboard
+│   └── Dashboard_gastos.pbix      # Arquivo Power BI
+├── src/
+│   └── main.py                    # Pipeline completo
+├── requirements.txt
+└── README.md
+```
 
-### SQL/SQLite
-* Modelagem relacional simples
-* Criação e atualização de tabelas
-* Consultas analíticas
-* Organização de dados estruturados
+---
 
+## 🚀 Como Reproduzir
 
-### Power BI
-* Construção de dashboards interativos
-* Desenvolvimento de KPIs financeiros
-* Storytelling com dados
-*Filtros dinâmicos e visualização analítica
+```bash
+# 1. Clone o repositório
+git clone https://github.com/Luizcomzz/Analise_Financeira_Pessoal.git
+cd Analise_Financeira_Pessoal
 
+# 2. Crie e ative o ambiente virtual
+python -m venv venv
+venv\Scripts\activate        # Windows
+# source venv/bin/activate   # Mac/Linux
 
-### Engenharia e Tratamento de Dados
-* Importação de arquivos CSV e Excel
-* Padronização de colunas
-* Conversão de formatos monetários
-* Tratamento de datas
-* Enriquecimento categórico
+# 3. Instale as dependências
+pip install -r requirements.txt
 
+# 4. Adicione seu CSV de transações em:
+#    data/raw/financas_2026.csv
+#    (use a planilha modelo do Google Sheets como base)
 
+# 5. Execute o pipeline
+python src/main.py
+```
 
+> **Planilha modelo:** disponível no [Google Sheets](https://docs.google.com/spreadsheets/d/1YnmxyQ9UEySS7x8o_XhC5K4v2xB2Np2OQDJj7tapOdI/edit?usp=sharing). Para exportação automática em CSV, utilize o Google Apps Script integrado à planilha.
 
-## Metodologia
-A etapa inicial consistiu na ingestão de dados financeiros a partir de planilhas previamente utilizadas para controle pessoal.
+---
 
+## 📈 KPIs Monitorados (mai–ago 2024)
 
-Foram exploradas duas possibilidades de leitura:
+| Indicador | Resultado |
+|---|---|
+| Total de transações analisadas | 57 |
+| Período coberto | 4 meses |
+| Total monitorado | R$ 13.955 |
+| Mês de maior gasto | Junho / R$ 4.167 |
+| Mês de menor gasto | Agosto / R$ 2.500 |
+| Maior categoria | Cartão (59% · R$ 8.236) |
+| Categoria a refinar | Outros (25,8% · R$ 3.597) |
 
+---
 
-Importação via CSV
-Importação via Excel
-
-
-A escolha pelo formato CSV ocorreu pela simplicidade de integração e melhor previsibilidade durante o tratamento automatizado.
-Tratamento e Padronização
-
-
-A preparação da base envolveu quatro etapas principais:
-
-
-* 1º. Normalização estrutural
-
-
-Padronização dos nomes das colunas para evitar inconsistências de leitura.
-
-
-* 2º. Conversão monetária
-
-
-Transformação dos valores do padrão textual brasileiro para formato numérico processável.
-
-
-* 3º. Conversão temporal
-
-
-Padronização de datas para análises mensais e integração com ferramentas analíticas.
-
-
-* 4º. Enriquecimento categórico
-
-
-Classificação automática das transações com base em palavras-chave presentes na descrição.
-
-
-A categorização foi construída por meio de regras condicionais baseadas em correspondência textual.
-
-
-Essa abordagem permitiu automatizar a classificação inicial das despesas e estruturar análises comparativas entre categorias de consumo.
-Embora parte das análises pudesse ser realizada exclusivamente com Pandas, a utilização de SQL foi mantida por seu valor estratégico no projeto.
-
-
-A integração com banco relacional permitiu:
-
-
-* simular cenários mais próximos de aplicações corporativas
-* praticar consultas analíticas
-* estruturar persistência de dados
-* reforçar conhecimentos em modelagem e extração
-
-
-## Principais aprendizados
-
-
-Durante o desenvolvimento, alguns aprendizados importantes surgiram:
-* A importância da padronização de dados antes da análise
-* O valor do versionamento incremental com Git/GitHub
-* A utilidade do SQL mesmo em projetos pessoais
-* A necessidade de debugging estruturado e refinamento contínuo
-O projeto também reforçou a ideia de que múltiplos commits representam rastreabilidade técnica e evolução do desenvolvimento.
-
-
-## Evoluções Futuras
+## 🗺️ Evoluções Planejadas
 
 ### Curto prazo
-* Refatoração da lógica de categorização via dicionários
+- Expandir o dicionário de categorias para reduzir "Outros" abaixo de 10%
+- Separar itens da fatura do cartão por categoria real de gasto
 
 ### Médio prazo
-* Inclusão de tabelas de receitas
-* Melhoria de organização por categorias
+- Incluir tabela de receitas para cálculo automático de saldo mensal
+- Separar gastos fixos de variáveis para análise de margem disponível
 
 ### Longo prazo
-* Modelagem integrada de gastos, receitas e investimentos
-* Automação completa da ingestão de dados
-* Consolidação patrimonial
+- Modelagem integrada de gastos, receitas e investimentos
+- Automação completa da ingestão via Google Apps Script
+- Consolidação patrimonial com visão de evolução de patrimônio líquido
 
+---
 
-## Tecnologias utilizadas:
+## 🛠️ Tecnologias Utilizadas
 
+| Ferramenta | Finalidade |
+|---|---|
+| [Python 3.14](https://www.python.org/) | Linguagem de programação principal |
+| [Pandas](https://pandas.pydata.org/) | Tratamento e transformação dos dados |
+| [SQLite](https://sqlite.org/) | Persistência e consultas analíticas |
+| [Power BI](https://www.microsoft.com/pt-br/power-platform/products/power-bi/desktop) | Dashboard interativo de KPIs financeiros |
+| [Google Sheets](https://workspace.google.com/products/sheets/) | Fonte de dados com exportação via Apps Script |
 
-* [Google Sheets](https://developers.google.com/workspace/sheets?hl=pt-br/): criação de planilhas em nuvem
-* [Python](https://www.python.org/): linguagem de programação
-* [Pandas](https://pypi.org/project/SpeechRecognition/](https://pandas.pydata.org/)): trabalhar com banco de dados e integralos
-* [SQLite](https://pypi.org/project/gTTS/](https://sqlite.org/)): consultar banco de dados
-* [Power BI](https://pypi.org/project/playsound/](https://www.microsoft.com/pt-br/power-platform/products/power-bi/desktop)): Apresentação de Dashboard
- 
-## Como executar:
+---
 
+## 👤 Autor
 
-### **1. Instale `Python` na sua máquina, por meio [deste link](https://www.python.org/)**
-
-
-### **2. Faça um clone [desse repositório](https://github.com/Luizcomzz/Analise_Financeira_Pessoal.git) na sua máquina:**
-
-
-* Crie uma pasta no seu computador para esse programa, recomendo colocar o nome **finanças pessoais**
-* Abra o `git bash` ou `terminal` dentro dessa pasta
-* Copie a [URL](https://github.com/Luizcomzz/Analise_Financeira_Pessoal.git) do repositório
-* Digite `git clone <URL copiada>` e pressione `enter`
-
-
-### **3. Instale as bibliotecas necessárias pelo terminal, dentro dessa pasta criada:**
-
-
-* Pandas: `pip install pandas`
-* SQLite3: `import sqlite3 as sql`
-
-
-### **4. Importe o modelo de [planilha](https://docs.google.com/spreadsheets/d/1YnmxyQ9UEySS7x8o_XhC5K4v2xB2Np2OQDJj7tapOdI/edit?usp=sharing) de dados automatica, porem vai ter que usar o google apps script ai posso te passar o codigo que usei e precisa ativar na primeira vez que usar
+Desenvolvido por **Luiz** · [LinkedIn](https://linkedin.com/in/seu-perfil) · [GitHub](https://github.com/Luizcomzz)

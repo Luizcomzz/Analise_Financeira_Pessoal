@@ -1,0 +1,13 @@
+﻿# ================================================================
+# requirements.txt — Analise_Financeira_Pessoal
+# ================================================================
+# Como usar:
+#   1. python -m venv venv
+#   2. venv\Scripts\activate   (Windows)
+#   3. pip install -r requirements.txt
+#
+# Biblioteca padrão usada (não precisa instalar):
+#   - sqlite3  → persistência e consultas no banco local
+# ================================================================
+
+pandas==3.0.3
