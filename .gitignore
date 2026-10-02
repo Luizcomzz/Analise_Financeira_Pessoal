@@ -1,5 +1,26 @@
+﻿# ================================================================
+# .gitignore — Analise_Financeira_Pessoal
+# ================================================================
+
+# --- Dados brutos (privacidade financeira) ---
+data/raw/
+data/processed/
+*.db
+
+# --- Ambientes virtuais Python ---
+venv/
 __pycache__/
 *.pyc
+*.pyo
+
+# --- Variáveis de ambiente e credenciais ---
 .env
+*.env
+
+# --- IDEs ---
 .vscode/
-data/
+.idea/
+
+# --- Sistema operacional ---
+.DS_Store
+Thumbs.db
