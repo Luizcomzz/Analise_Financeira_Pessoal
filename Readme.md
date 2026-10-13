@@ -181,4 +181,4 @@ python src/main.py
 
 ## 👤 Autor
 
-Desenvolvido por **Luiz** · [LinkedIn](https://linkedin.com/in/seu-perfil) · [GitHub](https://github.com/Luizcomzz)
+Desenvolvido por **Luiz** · [LinkedIn](https://www.linkedin.com/in/luiz-honorio-silva/) · [GitHub](https://github.com/Luizcomzz)
